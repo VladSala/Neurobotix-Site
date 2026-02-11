@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurobotix - Our Team</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="OurTeam+navbar+particles(dynamic)+fotter.css">
+    <script defer src="OurTeam+navbar+particles(dynamic).js"></script>
+</head>
+<body>
+    <div id="particles"></div>
+    <nav class="navbar">
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul>
+            <li><a href="/Un Neurosite/Ro/Home-Ro/Home.html">Home</a></li>
+            <li><a href="/Un Neurosite/Ro/OurStory-ro/OurStory.html">Our Story</a></li>
+            <li><a href="/Un Neurosite/Ro/OurTeam-Ro/OurTeam.html">The Team</a></li>
+            <li class="language-switcher">
+                <button id="langBtn" class="lang-btn" onclick="toggleLanguage()">
+                    <span class="lang-text">RO</span>
+                    <i class="fas fa-globe lang-icon"></i>
+                </button>
+            </li>
+            <li><a href="/Un Neurosite/Ro/Events-Ro/Events.html">Events</a></li>
+            <li><a href="/Un Neurosite/Ro/Sponors-Ro/Sponsors.html">Sponsors</a></li>
+            <li><a href="/Un Neurosite/Ro/ContactUs-Ro/Contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!-- Header with Logo -->
+    <header class="header">
+        <img src="/Un Neurosite/images/LogoMain/NeuroBotix-1024275.png" alt="Neurobotix Logo" width="56%" height="20%">
+    </header>
+    <!-- Navigation will be loaded from Navbar.js -->
+    <nav id="navbar"></nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Team Category Navigation -->
+        <nav class="team-nav">
+            <ul>
+                <li><a href="#" class="team-nav-link active" data-category="members">Members</a></li>
+                <li><a href="#" class="team-nav-link" data-category="volunteers">Volunteers</a></li>
+                <li><a href="#" class="team-nav-link" data-category="mentors">Mentors</a></li>
+                <li><a href="#" class="team-nav-link" data-category="alumni">Alumni</a></li>
+            </ul>
+        </nav>
+
+        <!-- Title Images -->
+        <div class="title-images">
+            <img src="/Un Neurosite/images/OurTeam/poze text/membri.png" alt="Members" class="page-title active" id="members-title" style="max-width: 80%; height: auto; filter: brightness(1.8) contrast(1.4);">
+            <img src="/Un Neurosite/images/OurTeam/poze text/voluntari.png" alt="Volunteers" class="page-title" id="volunteers-title" style="max-width: 80%; height: auto; filter: brightness(1.8) contrast(1.4); display: none;">
+            <img src="/Un Neurosite/images/OurTeam/poze text/mentori.png" alt="Mentors" class="page-title" id="mentors-title" style="max-width: 80%; height: auto; filter: brightness(1.8) contrast(1.4); display: none;">
+            <img src="/Un Neurosite/images/OurTeam/poze text/Alumni.png" alt="Alumni" class="page-title" id="alumni-title" style="max-width: 80%; height: auto; filter: brightness(1.8) contrast(1.4); display: none;">
+        </div>
+        
+        <!-- Members Section -->
+        <div class="team-section" id="members-section">
+            <div class="team-grid">
+                <!-- Crina Tomuță -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Members/Crina.jpg" alt="Crina Tomuță" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Crina Tomuță</h3>
+                        <p class="member-role">Team Leader</p>
+                        <p class="member-quote">"If there's something you don't understand, learn to understand it."</p>
+                    </div>
+                </div>
+                <!-- Nicolas Dumitrescu -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Members/Nicolas.jpg" alt="Nicolas Dumitrescu" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Nicolas Dumitrescu</h3>
+                        <p class="member-role">Team Leader</p>
+                        <p class="member-quote">"Those who are crazy enough to think they can change the world usually do."</p>
+                    </div>
+                </div>
+                <!-- Diana Trîncă -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Members/Daiana.jpg" alt="Diana Trîncă" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Diana Trîncă</h3>
+                        <p class="member-role">Head of Marketing</p>
+                        <p class="member-quote">"My ambition is to live like music."</p>
+                    </div>
+                </div>
+                <!-- Ștefan Voicu -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Members/Stefan.jpg" alt="Ștefan Voicu" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Ștefan Voicu</h3>
+                        <p class="member-role">Head of Engineering</p>
+                        <p class="member-quote">"Orice este posibil dacă ai curaj și oameni de încredere în jur."</p>
+                    </div>
+                </div>
+                <!-- Andrei Davidescu -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Members/Davidoiu.png.jpg" alt="Andrei Davidescu" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Andrei Davidescu</h3>
+                        <p class="member-role">Head of 3D Design</p>
+                        <p class="member-quote">"Munca este puntea dintre dorințe și realizări."</p>
+                    </div>
+                </div>
+                <!-- Diana Simtinică -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Members/Diana.jpg" alt="Diana Simtinică" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Diana Simtinică</h3>
+                        <p class="member-role">Marketing</p>
+                        <p class="member-quote">"Embrace the journey, not just the destination."</p>
+                    </div>
+                </div>
+                <!-- Daria Mocanu -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Members/Daria Mocanu.jpg" alt="Daria Mocanu" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Daria Mocanu</h3>
+                        <p class="member-role">Marketing</p>
+                        <p class="member-quote">"Never be limited by other people's limited imaginations."</p>
+                    </div>
+                </div>
+                <!-- Alexandra Melinte -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Members/Nelinte Alexandra.jpg" alt="Alexandra Melinte" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Alexandra Melinte</h3>
+                        <p class="member-role">Marketing</p>
+                        <p class="member-quote">"Toți trăim sub același cer dar nu toți avem același orizont."</p>
+                    </div>
+                </div>
+                <!-- Alesia Neculai -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Members/fmm2.jpg" alt="Alesia Neculai" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Alesia Neculai</h3>
+                        <p class="member-role">Marketing</p>
+                        <p class="member-quote">"Lasă-te ghidat de inimă. Adevărul nu cere gândire."</p>
+                    </div>
+                </div>
+                <!-- Alexandru Scafaru -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Members/Scafaru.jpg" alt="Alexandru Scafaru" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Alexandru Scafaru</h3>
+                        <p class="member-role">Marketing</p>
+                        <p class="member-quote">"Indiferent de situatie uita te mereu la partile bune."</p>
+                    </div>
+                </div>
+                <!-- Andrei Nanu -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Members/Nanu.jpg" alt="Andrei Nanu" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Andrei Nanu</h3>
+                        <p class="member-role">Programare</p>
+                        <p class="member-quote">"Information is power."</p>
+                    </div>
+                </div>
+                <!-- Tudor Munteanu -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Members/Munteanu.jpg" alt="Tudor Munteanu" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Tudor Munteanu</h3>
+                        <p class="member-role">Programare</p>
+                        <p class="member-quote">"Cunoașterea înseamnă putere, acțiunea înseamnă succes."</p>
+                    </div>
+                </div>
+                <!-- Rares Neculai -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Members/Rares.jpg" alt="Rares Neculai" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Rares Neculai</h3>
+                        <p class="member-role">Programare</p>
+                        <p class="member-quote">"Răbdarea este un element cheie al succesului."</p>
+                    </div>
+                </div>
+                <!-- Vlad Salavastru -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Members/Vlad.jpg" alt="Vlad Salavastru" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Vlad Salavastru</h3>
+                        <p class="member-role">Inginerie</p>
+                        <p class="member-quote">"Singura adevărată cunoaștere este aceea care ne face mai buni."</p>
+                    </div>
+                </div>
+                <!-- Vlăsceanu Șerban -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Members/Serbi.jpg" alt="Vlăsceanu Șerban" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Vlăsceanu Șerban</h3>
+                        <p class="member-role">Inginerie</p>
+                        <p class="member-quote">"Cea mai importantă funcție a inginerului proiectant este să facă lucrurile cât mai dificile pentru constructor și aproape imposibile pentru reparații."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Volunteers Section -->
+        <div class="team-section" id="volunteers-section" style="display: none;">
+            <div class="team-grid">
+                <!-- Volunteer 1 -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Mentors/Petri.png" alt="Volunteer 1" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Lisa Brown</h3>
+                        <p class="member-quote">"Volunteering to help build a better future through technology."</p>
+                    </div>
+                </div>
+
+                <!-- Volunteer 2 -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Mentors/Surdu.png" alt="Volunteer 2" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Tom Wilson</h3>
+                        <p class="member-quote">"Contributing my skills to advance robotics education."</p>
+                    </div>
+                </div>
+
+                <!-- Volunteer 3 -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Alumni/Ana.jpg" alt="Volunteer 3" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Sarah Davis</h3>
+                        <p class="member-quote">"Making robotics accessible to everyone through volunteering."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mentors Section -->
+        <div class="team-section" id="mentors-section" style="display: none;">
+            <div class="team-grid">
+                <!-- Daniel Petriceanu -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Mentors/Petri.png" alt="Daniel Petriceanu" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Daniel Petriceanu</h3>
+                        <p class="member-quote">"Este ușor să spui că este greu, dar este greu să spui că este ușor."</p>
+                    </div>
+                </div>
+                <!-- Mihai Surdu -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Mentors/Surdu.png" alt="Mihai Surdu" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Mihai Surdu</h3>
+                        <p class="member-quote">"..."</p>
+                    </div>
+                </div>
+                <!-- Ana Bratu -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Alumni/Ana.jpg" alt="Ana Bratu" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Ana Bratu</h3>
+                        <p class="member-quote">"Sois toujours poète, même en prose" - Ch. Baudelaire</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Alumni Section -->
+        <div class="team-section" id="alumni-section" style="display: none;">
+            <div class="team-grid">
+                <!-- Matei Hriscu -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Alumni/Mat.png" alt="Matei Hriscu" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Matei Hriscu</h3>
+                        <p class="member-quote">"Este ușor să spui că este greu, dar este greu să spui că este ușor."</p>
+                    </div>
+                </div>
+                <!-- Matei Bratu -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Alumni/Matei.jpg" alt="Matei Bratu" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Matei Bratu</h3>
+                        <p class="member-quote">"Cu banuți mulți poți să muți munți dar pentru bănuți mulți trebuie să muți munți."</p>
+                    </div>
+                </div>
+                <!-- Radu Dobre -->
+                <div class="team-card">
+                    <div class="card-image-container">
+                        <img src="/Un Neurosite/images/OurTeam/Alumni/Radu.jpg" alt="Radu Dobre" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Radu Dobre</h3>
+                        <p class="member-quote">"The future belongs to those who believe in the beauty of their dreams." – Eleanor Roosevelt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+40 123 456 789</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:neurobotix@cnmv.ro">neurobotix@cnmv.ro</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                © 2024 Neurobotix. All rights reserved.
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/neurobotix" target="_blank" class="social-icon"><img src="/Un Neurosite/images/Logos (footer)/facebook-d1e2fb0b.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/neurobotix_ftc/" target="_blank" class="social-icon"><img src="/Un Neurosite/images/Logos (footer)/instragram.png" alt="Instagram"></a>
+                <a href="https://www.youtube.com/@neurobotix" target="_blank" class="social-icon"><img src="/Un Neurosite/images/Logos (footer)/youtube-bcacc00d.png" alt="YouTube"></a>
+                <a href="https://www.tiktok.com/@neurobotix_ftc" target="_blank" class="social-icon"><img src="/Un Neurosite/images/Logos (footer)/tiktok-b38fb6f1.png" alt="TikTok"></a>
+                <a href="#" target="_blank" class="social-icon"><img src="/Un Neurosite/images/Logos (footer)/linkedin.png" alt="LinkedIn"></a>
+                <a href="#" target="_blank" class="social-icon"><img src="/Un Neurosite/images/Logos (footer)/github.png" alt="GitHub"></a>
+                <a href="#" target="_blank" class="social-icon"><img src="/Un Neurosite/images/Logos (footer)/twitter.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
