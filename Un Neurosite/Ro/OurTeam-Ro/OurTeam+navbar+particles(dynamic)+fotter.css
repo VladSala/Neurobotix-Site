@@ -2,6 +2,12 @@ html {
     background-color: #000;
 }
 
+@font-face {
+    font-family: 'Quantum';
+    src: url('/Un Neurosite/images/OurTeam/poze text/Quantum.otf') format('opentype');
+    font-display: swap;
+}
+
 
 * {
     margin: 0;
@@ -37,14 +43,18 @@ body {
     text-align: center;
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 700;
+    font-family: 'Quantum', 'Poppins', sans-serif;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     margin-bottom: 80px;
-    background: linear-gradient(45deg, #ffffff, #e0e0e0, #ffffff);
+    background: linear-gradient(45deg,#b5179e,#6a00f4, #8714ad, #6a00f4, #b5179e);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: shimmer 3s ease-in-out infinite;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    animation: shimmer 6s linear infinite;
+    text-shadow: 0 0 30px rgba(181, 23, 158, 0.6),
+             
     display: block;
     margin-left: auto;
     margin-right: auto;

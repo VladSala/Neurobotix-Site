@@ -11,7 +11,7 @@ function debounce(func, wait, immediate) {
         timeout = setTimeout(later, wait);
         if (callNow) func.apply(context, args);
     };
-}
+};
 
 document.addEventListener('DOMContentLoaded', () => {
     // === Hamburger menu ===
@@ -33,31 +33,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // === Floating Language Button ===
+    // === Keep language button visible on mobile and pin top-right ===
+    // We move ONLY the button into a floating container (not the <li>)
     const nav = document.querySelector('.navbar');
-    const ul = document.querySelector('.navbar ul');
-    const langLi = document.querySelector('.language-switcher');
-    const langBtn = document.getElementById('langBtn');
+    const ul  = document.querySelector('.navbar ul');
+    const langLi = document.querySelector('.language-switcher');       // <li class="language-switcher">
+    const langBtn = document.getElementById('langBtn');                // <button id="langBtn">
 
     if (nav && ul && langLi && langBtn) {
-        // Placeholder to restore button on desktop
+        // Placeholder to restore button into original LI on desktop
         const btnPlaceholder = document.createComment('lang-btn-slot');
         if (langBtn.parentElement === langLi) {
             langLi.insertBefore(btnPlaceholder, langBtn);
         }
 
-        // Floating container for mobile
+        // Create (once) a floating container for mobile
         const floatId = 'lang-float';
         let floatContainer = document.getElementById(floatId);
         if (!floatContainer) {
             floatContainer = document.createElement('div');
             floatContainer.id = floatId;
+            // Inline styles so nothing can override them
             Object.assign(floatContainer.style, {
                 position: 'fixed',
                 top: '20px',
                 right: '15px',
                 zIndex: '2000',
-                display: 'none',
+                display: 'none',     // hidden by default; shown on mobile
                 margin: '0',
                 padding: '0'
             });
@@ -66,16 +68,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const placeLang = () => {
             const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
             if (isMobile) {
-                if (langBtn.parentElement !== floatContainer)
+                // Move the BUTTON into our floating container and show it
+                if (langBtn.parentElement !== floatContainer) {
                     floatContainer.appendChild(langBtn);
+                }
                 floatContainer.style.display = 'block';
+
+                // Optional: tighten button spacing for mobile
                 langBtn.style.fontSize = '14px';
                 langBtn.style.padding = '6px 12px';
             } else {
-                if (btnPlaceholder.parentNode && langBtn.parentElement !== langLi)
+                // Restore the BUTTON back into the original LI on desktop
+                if (btnPlaceholder.parentNode && langBtn.parentElement !== langLi) {
                     langLi.insertBefore(langBtn, btnPlaceholder);
+                }
                 floatContainer.style.display = 'none';
+
+                // Clear mobile tweaks
                 langBtn.style.fontSize = '';
                 langBtn.style.padding = '';
             }
@@ -86,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('orientationchange', placeLang);
     }
 
-    // === Fade-in effect ===
+    // === Image fade-in observer ===
     const images = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -95,10 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, { threshold: 0.1 });
-
     images.forEach(image => observer.observe(image));
 
-    // === Particles Setup ===
+    // === Particle setup ===
     if (window.location.pathname.includes('Home.html')) {
         const debouncedParticleUpdate = debounce(updateHomeParticles, 150);
         updateHomeParticles();
@@ -118,23 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         updateParticlesForHeight();
     }
-
-    // === Language Detection (Fixed) ===
-    const currentPath = window.location.pathname;
-    const langText = document.querySelector('.lang-text');
-
-    if (langText) {
-        if (currentPath.includes('/Eng/')) {
-            currentLanguage = 'EN';
-            langText.textContent = 'EN';
-        } else {
-            currentLanguage = 'RO';
-            langText.textContent = 'RO';
-        }
-    }
 });
 
-// === Particles Logic ===
+// === Particle logic ===
 const MAX_PARTICLES = 300;
 let particlesInitialized = false;
 
@@ -196,12 +192,12 @@ function updateHomeParticles() {
     createOrUpdateParticles(particleCount);
 }
 
-// === Language Switch Logic ===
+// === Language switching ===
 let currentLanguage = 'RO';
 
 const languagePaths = {
     'Home.html': { ro: '/Un Neurosite/Ro/Home-Ro/Home.html', eng: '/Un Neurosite/Eng/Home-Eng/Home.html' },
-    'OurStory.html': { ro: '/Un Neurosite/Ro/OurStory-Ro/OurStory.html', eng: '/Un Neurosite/Eng/OurStory-Eng/OurStory.html' },
+    'OurStory.html': { ro: '/Un Neurosite/Ro/OurStory-ro/OurStory.html', eng: '/Un Neurosite/Eng/OurStory-Eng/OurStory.html' },
     'OurTeam.html': { ro: '/Un Neurosite/Ro/OurTeam-Ro/OurTeam.html', eng: '/Un Neurosite/Eng/OurTeam-Eng/OurTeam.html' },
     'Events.html': { ro: '/Un Neurosite/Ro/Events-Ro/Events.html', eng: '/Un Neurosite/Eng/Events-Eng/Events.html' },
     'Sponsors.html': { ro: '/Un Neurosite/Ro/Sponors-Ro/Sponsors.html', eng: '/Un Neurosite/Eng/Sponors-Eng/Sponsors.html' },
@@ -211,11 +207,10 @@ const languagePaths = {
 function toggleLanguage() {
     const langBtn = document.getElementById('langBtn');
     const langText = document.querySelector('.lang-text');
-    if (!langBtn || !langText) return;
 
     langText.classList.add('changing');
     langBtn.classList.add('active');
-
+    
     setTimeout(() => {
         currentLanguage = currentLanguage === 'RO' ? 'EN' : 'RO';
         langText.textContent = currentLanguage;
@@ -232,3 +227,14 @@ function toggleLanguage() {
         langBtn.classList.remove('active');
     }, 2000);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPath = window.location.pathname;
+    if (currentPath.includes('/Eng/')) {
+        currentLanguage = 'ENG';
+        document.querySelector('.lang-text').textContent = 'EN';
+    } else {
+        currentLanguage = 'RO';
+        document.querySelector('.lang-text').textContent = 'RO';
+    }
+});
